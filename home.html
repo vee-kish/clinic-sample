@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&amp;family=Atkinson+Hyperlegible+Next:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-variant": "#e1e3e4",
+                    "on-surface-variant": "#41484c",
+                    "surface-tint": "#326479",
+                    "on-primary-fixed-variant": "#154c60",
+                    "inverse-on-surface": "#eff1f2",
+                    "inverse-surface": "#2e3132",
+                    "surface-container-highest": "#e1e3e4",
+                    "primary-fixed": "#bde9ff",
+                    "tertiary-fixed": "#e3e2e0",
+                    "on-secondary-fixed-variant": "#314c42",
+                    "on-tertiary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "surface-container": "#eceeef",
+                    "on-primary-fixed": "#001f2a",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "primary": "#2f6277",
+                    "secondary-fixed-dim": "#afcdc0",
+                    "on-secondary": "#ffffff",
+                    "surface-container-low": "#f2f4f5",
+                    "secondary": "#49645a",
+                    "on-tertiary-container": "#fdfcfa",
+                    "on-primary-container": "#fbfdff",
+                    "tertiary-fixed-dim": "#c7c6c5",
+                    "surface": "#f8f9fa",
+                    "surface-bright": "#f8f9fa",
+                    "on-tertiary-fixed": "#1a1c1b",
+                    "on-background": "#191c1d",
+                    "on-tertiary-fixed-variant": "#464746",
+                    "outline": "#71787c",
+                    "primary-container": "#4a7b90",
+                    "error": "#ba1a1a",
+                    "on-secondary-container": "#4d685e",
+                    "surface-container-high": "#e7e8e9",
+                    "tertiary": "#5b5c5b",
+                    "on-secondary-fixed": "#042018",
+                    "primary-fixed-dim": "#9ccee5",
+                    "secondary-fixed": "#cbe9dc",
+                    "inverse-primary": "#9ccee5",
+                    "secondary-container": "#c8e6d9",
+                    "outline-variant": "#c0c7cc",
+                    "surface-dim": "#d8dadb",
+                    "on-surface": "#191c1d",
+                    "tertiary-container": "#747573",
+                    "on-error": "#ffffff",
+                    "background": "#f8f9fa",
+                    "error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "gutter": "24px",
+                    "xl": "80px",
+                    "sm": "12px",
+                    "margin-desktop": "64px",
+                    "lg": "48px",
+                    "margin-mobile": "16px",
+                    "md": "24px",
+                    "xs": "4px"
+            },
+            "fontFamily": {
+                    "label-md": ["Atkinson Hyperlegible Next"],
+                    "label-sm": ["Atkinson Hyperlegible Next"],
+                    "headline-md": ["Manrope"],
+                    "headline-lg-mobile": ["Manrope"],
+                    "body-lg": ["Atkinson Hyperlegible Next"],
+                    "body-md": ["Atkinson Hyperlegible Next"],
+                    "headline-xl": ["Manrope"],
+                    "headline-lg": ["Manrope"]
+            },
+            "fontSize": {
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "500"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #f8f9fa;
+        }
+        .ambient-shadow-low {
+            box-shadow: 0px 4px 20px rgba(90, 139, 161, 0.08);
+        }
+        .ambient-shadow-high {
+            box-shadow: 0px 12px 40px rgba(90, 139, 161, 0.12);
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-md shadow-sm dark:shadow-none">
+<nav class="relative flex justify-between items-center w-full px-margin-desktop py-4 max-w-[1440px] mx-auto">
+<div class="text-headline-md font-headline-md font-bold text-primary dark:text-primary-fixed-dim">
+                SerenePath Clinic
+            </div>
+<div class="hidden md:flex items-center space-x-lg">
+<a class="font-label-md text-label-md text-primary dark:text-primary-fixed-dim border-b-2 border-primary dark:border-primary-fixed-dim pb-1" href="../home_serenepath_clinic/home.html">Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="../our_services_serenepath_clinic/services.html">Services</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="../pricing_insurance_serenepath_clinic/pricing.html">Pricing</a>
+<a class="font-label-md text-label-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="../book_a_consultation_serenepath_clinic/book.html">Consultation</a>
+</div>
+<button id="mobile-menu-toggle" class="md:hidden bg-surface text-primary border border-outline px-3 py-2 rounded-lg hover:bg-surface-bright transition-all">
+                <span class="material-symbols-outlined">menu</span>
+            </button>
+<a class="hidden md:inline-flex bg-primary text-on-primary px-6 py-2 rounded-full font-label-md text-label-md hover:bg-primary-container transition-all active:scale-95" href="../book_a_consultation_serenepath_clinic/book.html">
+                Book Now
+            </a>
+<a class="md:hidden bg-primary text-on-primary px-5 py-2 rounded-full font-label-md text-label-md hover:bg-primary-container transition-all active:scale-95" href="../book_a_consultation_serenepath_clinic/book.html">
+                Book
+            </a>
+<div id="mobile-menu" class="hidden md:hidden absolute inset-x-0 top-full bg-surface border-t border-outline-variant">
+<div class="flex flex-col px-6 py-4 space-y-3">
+<a class="font-label-md text-label-md text-on-surface hover:text-primary transition-colors" href="../home_serenepath_clinic/home.html">Home</a>
+<a class="font-label-md text-label-md text-on-surface hover:text-primary transition-colors" href="../our_services_serenepath_clinic/services.html">Services</a>
+<a class="font-label-md text-label-md text-on-surface hover:text-primary transition-colors" href="../pricing_insurance_serenepath_clinic/pricing.html">Pricing</a>
+<a class="font-label-md text-label-md text-on-surface hover:text-primary transition-colors" href="../book_a_consultation_serenepath_clinic/book.html">Consultation</a>
+<a class="font-label-md text-label-md text-primary hover:text-primary-container transition-colors" href="../book_a_consultation_serenepath_clinic/book.html">Book Now</a>
+</div>
+</div>
+</nav>
+</header>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="px-margin-desktop py-xl max-w-[1440px] mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-6">
+<span class="inline-block bg-secondary-container text-on-secondary-container px-4 py-1 rounded-full font-label-sm text-label-sm mb-md uppercase tracking-wider">Compassionate Care</span>
+<h1 class="font-headline-xl text-headline-xl text-primary mb-md">Restoring Balance to Your Modern Life.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-lg pr-xl">Experience a clinical environment designed for serenity. We combine professional expertise with a holistic approach to your long-term wellbeing.</p>
+<div class="flex flex-col sm:flex-row items-center gap-md">
+<a class="bg-primary text-on-primary px-8 py-3 rounded-full font-label-md text-label-md hover:bg-primary-container transition-all shadow-md text-center" href="../book_a_consultation_serenepath_clinic/book.html">
+                            Schedule Visit
+                        </a>
+<a class="border border-secondary text-secondary px-8 py-3 rounded-full font-label-md text-label-md hover:bg-secondary-container transition-all text-center" href="../our_services_serenepath_clinic/services.html">
+                            View Services
+                        </a>
+</div>
+</div>
+<div class="lg:col-span-6">
+<div class="relative rounded-xl overflow-hidden aspect-[4/3] ambient-shadow-high">
+<img alt="Clinic Interior" class="w-full h-full object-cover" data-alt="A serene and modern clinic reception area featuring soft, natural lighting and minimalist wooden furniture. The color palette is dominated by calming sage greens, slate grays, and soft blues, creating a restorative medical atmosphere. Large windows show blurred greenery outside, and the space feels airy, welcoming, and professional without the coldness of a traditional hospital." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqL7nwX8F3qt9NFee_UHHjRsP2jnAKYicDvSy9kx-5I05v_aLlksfAlX5nCM4agXluD1-ztTae0H7dZ1JfWr4TBUM6Y0Uqhximq__m39ZagnL2zPVvZbeJnF72b7LW4LQXjwcJ02NAZR-QNyYQ_cX6opTV1qtMy1ll7g9T20tz30TMuNK46p4O6cY-kmtP8Qd3Ok0m89ZZdBVmq7qeck0j-IYEZZOqD8KqsCSwW6PJqQatGm69tl_AyW3DucQjXV3Ozcxi8YtnN2ag"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Approach Section (Bento Style) -->
+<section class="bg-surface-container-low py-xl px-margin-desktop">
+<div class="max-w-[1440px] mx-auto">
+<div class="text-center mb-xl">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-sm">Our Restorative Approach</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">We move beyond symptoms to treat the whole individual, utilizing a framework built on three core pillars of modern wellness.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-12 gap-gutter">
+<!-- Column 1: Empathetic Discovery -->
+<div class="md:col-span-2 lg:col-span-4 bg-surface-container-lowest p-lg rounded-xl ambient-shadow-low flex flex-col">
+<div class="w-12 h-12 bg-secondary-container rounded-lg flex items-center justify-center mb-md">
+<span class="material-symbols-outlined text-on-secondary-container" data-icon="clinical_notes">clinical_notes</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-sm">Empathetic Discovery</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow">Every journey begins with a deep, attentive dialogue. We listen to your history and aspirations to build a truly personalized roadmap.</p>
+</div>
+<!-- Column 2: Advanced Science (Large) -->
+<div class="md:col-span-4 lg:col-span-5 bg-primary-container text-on-primary-container p-lg rounded-xl ambient-shadow-low flex flex-col relative overflow-hidden">
+<div class="relative z-10">
+<div class="w-12 h-12 bg-surface-container-lowest/20 rounded-lg flex items-center justify-center mb-md">
+<span class="material-symbols-outlined text-on-primary-container" data-icon="biotech">biotech</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-sm">Clinical Precision</h3>
+<p class="font-body-md text-body-md opacity-90">We leverage state-of-the-art diagnostic tools and evidence-based treatments to ensure every decision is grounded in clinical excellence.</p>
+</div>
+<div class="absolute bottom-[-20px] right-[-20px] opacity-10">
+<span class="material-symbols-outlined text-[160px]" data-icon="pulse">pulse_alert</span>
+</div>
+</div>
+<!-- Column 3: Sustained Vitality -->
+<div class="md:col-span-2 lg:col-span-3 bg-surface-container-lowest p-lg rounded-xl ambient-shadow-low flex flex-col">
+<div class="w-12 h-12 bg-secondary-container rounded-lg flex items-center justify-center mb-md">
+<span class="material-symbols-outlined text-on-secondary-container" data-icon="eco">eco</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-sm">Sustainable Growth</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Our goal isn't just a quick fix; it's empowering you with the tools and knowledge to maintain vitality independently.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Services Section -->
+<section class="py-xl px-margin-desktop max-w-[1440px] mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-xl gap-md">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-sm">Core Clinical Services</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">Specialized care paths designed for modern lifestyles, ranging from diagnostic health checks to restorative therapies.</p>
+</div>
+<a class="text-primary font-label-md flex items-center gap-xs hover:underline" href="../our_services_serenepath_clinic/services.html">
+                    View full catalog <span class="material-symbols-outlined text-[18px]" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Service 1 -->
+<div class="bg-surface rounded-xl overflow-hidden ambient-shadow-low hover:translate-y-[-4px] transition-transform duration-300">
+<div class="h-48 overflow-hidden">
+<img alt="Health Assessment" class="w-full h-full object-cover" data-alt="A close-up shot of a modern medical consultation with soft blue and green lighting. A professional healthcare provider in a soft gray lab coat is holding a sleek digital tablet, showing clear health charts to a patient. The background is a clean, minimalist clinic setting with warm white surfaces and a calm, reassuring mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCsp-tT2MawwV9nKcgIGxGcNufZYuSq73O322Ac8f08EU7i6keUuPxWxdrUQHwlPtrnIC5EH_Qoxf3F7gtTuCyvQchO5mL-BlQUi9p8_xFj4u4JHpenso0sqj6Z28yx0ZcTMeHDJMkY-waUTrmVDR3xD4fmMRaN9hmjvtrRC1v_G1_3DQhH6sDcA_ThEEglDDnIbyzKIVrnKw6RDcPWhcBvXPpYFD7aABwbZgEITShvGlvobAcqjS9Mg9pHxN5PGbI61Z37_4wZYef"/>
+</div>
+<div class="p-lg">
+<div class="flex justify-between items-start mb-md">
+<h4 class="font-headline-md text-primary">Vitality Checkup</h4>
+<span class="bg-secondary-container text-on-secondary-container text-[10px] px-2 py-1 rounded uppercase font-bold tracking-tighter">Popular</span>
+</div>
+<p class="font-body-md text-on-surface-variant mb-lg">A comprehensive full-body diagnostic suite designed to identify subtle imbalances before they become issues.</p>
+<button class="text-primary font-label-md text-label-md flex items-center gap-xs group">
+                            Learn more <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Service 2 -->
+<div class="bg-surface rounded-xl overflow-hidden ambient-shadow-low hover:translate-y-[-4px] transition-transform duration-300">
+<div class="h-48 overflow-hidden">
+<img alt="Restorative Therapy" class="w-full h-full object-cover" data-alt="A peaceful therapy room featuring natural materials like bamboo and stone. Soft sunlight filters through sheer linen curtains, illuminating a clean, comfortable treatment bed. The aesthetic is inspired by Zen minimalism, with a focus on natural textures and a soothing palette of cream, sage, and slate blue to evoke a sense of deep restorative calm." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGNTHmYX2r6giKwiM4x2hi5RX9snDkwVxeSkvEdo433F2-OQKidZGSNMlRHKWFn2hUkwkGNf7n4_TdRwzNX4STjItbkStAxht1K6n1X5xSjvWH77-Q6fOdnMU67xu92OpAwsehnfeC5xDYbYlPjfqBk03FxC2gEePWfY3LQlRFtkkPjcN_LIIyigTbe8152BB5SnmyBlLhB7cqCasED4ZmMnmNu96q7C6KpiCqmoRZiHj8XA0kT9ZLP3mNPfNvF1uQKNJYvk4jOoVO"/>
+</div>
+<div class="p-lg">
+<h4 class="font-headline-md text-primary mb-md">Restorative Therapy</h4>
+<p class="font-body-md text-on-surface-variant mb-lg">Integration of physical rehabilitation and mindfulness techniques to help your body recover from chronic stress.</p>
+<button class="text-primary font-label-md text-label-md flex items-center gap-xs group">
+                            Learn more <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Service 3 -->
+<div class="bg-surface rounded-xl overflow-hidden ambient-shadow-low hover:translate-y-[-4px] transition-transform duration-300">
+<div class="h-48 overflow-hidden">
+<img alt="Specialized Consulting" class="w-full h-full object-cover" data-alt="A modern office environment with a professional but warm aesthetic. A healthcare consultant is seen through a soft-focus lens, engaging in a friendly conversation. The workspace is organized and minimalist, with soft task lighting and a palette of muted blues and warm whites, emphasizing a high-end, empathetic patient experience." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzatgagowGabKDtgckTKB7FVNLXuHE-4SE-q7cdLU1fuS5MtVd1TYv4Y15CpJEh0EWtmwGzaMKlZEsIXcuw6yK8UydDJ15vYHPr4xl05vvi8jzHHmNVvMelq-VJSuMDcUpe4A4jA3fXz3uYCnkhc03-6EOyNIODWpOkN396SbwTvG1yiQ3Qb216saO0SStlyp4d0XVtNjduHyKGmwdVsO_2noPfEoesRrujIe7-AcuMKtnnGs4CyqeKVPnFNrC6gX0QN1NBxDKFH8I"/>
+</div>
+<div class="p-lg">
+<h4 class="font-headline-md text-primary mb-md">Specialized Consulting</h4>
+<p class="font-body-md text-on-surface-variant mb-lg">One-on-one sessions with our lead specialists for complex cases requiring multi-disciplinary insights.</p>
+<button class="text-primary font-label-md text-label-md flex items-center gap-xs group">
+                            Learn more <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="px-margin-desktop py-xl max-w-[1440px] mx-auto">
+<div class="bg-primary-container rounded-3xl p-xl flex flex-col md:flex-row items-center justify-between gap-lg relative overflow-hidden">
+<div class="relative z-10 text-center md:text-left">
+<h2 class="font-headline-xl text-headline-xl text-on-primary-container mb-md">Ready to start your path?</h2>
+<p class="font-body-lg text-body-lg text-on-primary-container/80 max-w-xl">Book your initial consultation today and experience a new standard of restorative medical care.</p>
+</div>
+<div class="relative z-10 flex flex-col sm:flex-row gap-md">
+<button class="bg-surface text-primary px-xl py-4 rounded-full font-label-md text-label-md hover:bg-surface-bright transition-all shadow-lg active:scale-95">
+                        Book Consultation
+                    </button>
+<button class="border-2 border-surface/30 text-surface px-xl py-4 rounded-full font-label-md text-label-md hover:bg-surface/10 transition-all">
+                        Call Clinic
+                    </button>
+</div>
+<!-- Abstract visual element -->
+<div class="absolute right-[-10%] top-[-50%] w-[500px] h-[500px] bg-secondary-container/20 rounded-full blur-[80px]"></div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-inverse-surface border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-desktop py-xl w-full max-w-[1440px] mx-auto">
+<div class="md:col-span-4">
+<div class="text-headline-sm font-headline-lg text-primary dark:text-primary-fixed-dim mb-md">
+                    SerenePath Clinic
+                </div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md pr-md">Restorative care designed for the modern individual. We merge clinical precision with holistic wellness for lasting health.</p>
+</div>
+<div class="md:col-span-3">
+<h4 class="font-label-md text-label-md text-primary mb-md uppercase tracking-widest">Connect</h4>
+<ul class="space-y-sm">
+<li><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-all underline decoration-transparent hover:decoration-primary" href="#">Clinic Hours: Mon-Fri 8am-6pm</a></li>
+<li><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-all underline decoration-transparent hover:decoration-primary" href="#">Contact: (555) 123-4567</a></li>
+<li><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-all underline decoration-transparent hover:decoration-primary" href="#">Emergency Support</a></li>
+</ul>
+</div>
+<div class="md:col-span-3">
+<h4 class="font-label-md text-label-md text-primary mb-md uppercase tracking-widest">Legal</h4>
+<ul class="space-y-sm">
+<li><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-all underline decoration-transparent hover:decoration-primary" href="../privacy.html">Privacy Policy</a></li>
+<li><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-all underline decoration-transparent hover:decoration-primary" href="../terms.html">Terms of Service</a></li>
+<li><a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-all underline decoration-transparent hover:decoration-primary" href="#">Patient Rights</a></li>
+</ul>
+</div>
+<div class="md:col-span-2">
+<h4 class="font-label-md text-label-md text-primary mb-md uppercase tracking-widest">Follow</h4>
+<div class="flex gap-md">
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer transition-colors" data-icon="share">share</span>
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer transition-colors" data-icon="public">public</span>
+<span class="material-symbols-outlined text-on-surface-variant hover:text-primary cursor-pointer transition-colors" data-icon="mail">mail</span>
+</div>
+</div>
+<div class="md:col-span-12 border-t border-outline-variant pt-lg mt-md">
+<p class="font-label-sm text-label-sm text-on-surface-variant opacity-70">© 2024 SerenePath Clinic. Restorative Care for Modern Living.</p>
+</div>
+</div>
+</footer>
+<script>
+  const homeMenuToggle = document.getElementById('mobile-menu-toggle');
+  const homeMobileMenu = document.getElementById('mobile-menu');
+  if (homeMenuToggle && homeMobileMenu) {
+    homeMenuToggle.addEventListener('click', () => homeMobileMenu.classList.toggle('hidden'));
+  }
+</script>
+</body></html>
